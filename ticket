@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Ticket 3:
 
 Doel:
@@ -20,4 +21,28 @@ Bemerkingen:
 a) Gebruik PIL voor de afbeeldingen
 b) Geen hardcoded padnaam -> werk met een constante
 c) Respecteer de reeds opgezette architectuur
+=======
+Ticket 3:
+
+Doel:
+Toon in het right_frame een overzicht van alle klasten, waarbij elke kast een knop met een afbeelding is.
+
+Stappenplan:
+STAP 1: Zorg ervoor dat het Excel bestand een tabblad heeft met daarin alle namen van de kasten. Bijv naam tabblad "Kasten"
+STAP 2: Structuur van het tabblad:
+|kast_id|naam|bestandsnaam van de de afbeelding|
+
+De assumptie is dat we alle afbeeldingen in één vooraf gekende subfolder plaatsen in het project.
+
+STAP 3: Breid de excel_controller.py uit met een functie om de lijst van kasten te bekomen.
+
+STAP 4: Pas het right_frame aan zodat er een knop per kast geplaatst is op het scherm (elke kast krijgt de bijhorende afbeelding).
+
+STAP 5: Zorg ervoor dat de knoppen overzichtelijk op het scherm komen te staan. Denk dus na over hoeveel kasten je per rij maximaal wil tonen op het scherm.
+
+Bemerkingen:
+a) Gebruik PIL voor de afbeeldingen
+b) Geen hardcoded padnaam -> werk met een constante
+c) Respecteer de reeds opgezette architectuur
+>>>>>>> 4ea80e0 (Initial Version)
 d) zorg voor leesbare code die je kan uitleggen aan je klasgenoten.

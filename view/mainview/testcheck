@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import tkinter as tk
 from PIL import Image, ImageTk # Importeer Pillow modules
 import os 
@@ -46,3 +47,53 @@ def create_right_frame(parent):
             button.pack(pady=5) # Of gebruik .grid()
 
     return right_frame
+=======
+import tkinter as tk
+from PIL import Image, ImageTk # Importeer Pillow modules
+import os 
+# Importeer je read_kasten functie
+# from jouw_module import read_kasten 
+
+# Globale lijst om verwijzingen naar afbeeldingen te behouden en garbage collection te voorkomen
+image_references = []
+
+def create_right_frame(parent):
+    right_frame = tk.Frame(parent)
+    hello = tk.Label(right_frame, text="Hello right world")
+    hello.pack(padx=10, pady=10)
+
+    # Vang de twee lijsten op in aparte variabelen
+    excel_file_path = "Magazijn.xlsx" # Zorg dat dit het juiste pad is
+    lijst_kasten, lijst_fotobestanden = read_kasten(excel_file_path)
+
+    # Bepaal het basispad waar je afbeeldingen staan
+    # Pas dit aan naar je daadwerkelijke map (bijv. 'C:/Users/.../Afbeeldingen')
+    base_img_path = os.path.join(os.getcwd(), 'images') 
+
+    # Loop nu door beide lijsten heen om buttons te maken
+    for i, (naam, bestandsnaam) in enumerate(zip(lijst_kasten, lijst_fotobestanden)):
+        # 1. Creëer het volledige bestandspad
+        full_img_path = os.path.join(base_img_path, bestandsnaam)
+        
+        # 2. Laad de afbeelding met Pillow
+        try:
+            image = Image.open(full_img_path)
+            # Pas de grootte aan (bijv. 50x50 pixels)
+            image = image.resize((50, 50), Image.Resampling.LANCZOS)
+            photo = ImageTk.PhotoImage(image)
+        except FileNotFoundError:
+            print(f"Afbeelding niet gevonden: {full_img_path}")
+            # Gebruik een placeholder of sla de button over als de afbeelding mist
+            photo = None # Of laad een standaard "geen afbeelding" foto
+
+        # 3. Creëer de button
+        if photo:
+            button = tk.Button(right_frame, image=photo, text=naam, compound=tk.TOP) #
+            # BELANGRIJK: Bewaar een referentie naar de afbeelding om garbage collection te voorkomen
+            # Dit kan op de button zelf of in een globale lijst
+            button.image = photo 
+            image_references.append(photo) # Extra veiligheid
+            button.pack(pady=5) # Of gebruik .grid()
+
+    return right_frame
+>>>>>>> 4ea80e0 (Initial Version)
