@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #IMPORTS
 import tkinter as tk
 from tkinter import ttk
@@ -67,7 +66,6 @@ def create_left_frame(parent, on_leerling_selected, right_frame):
     return left_frame
 
 
-=======
 #IMPORTS
 import tkinter as tk
 from tkinter import ttk
@@ -136,4 +134,3 @@ def create_left_frame(parent, on_leerling_selected, right_frame):
     return left_frame
 
 
->>>>>>> 4ea80e0 (Initial Version)

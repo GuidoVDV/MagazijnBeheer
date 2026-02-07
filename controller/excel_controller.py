@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from model.excel_reader import read_excel_sheet
 
 #Deze functie leest de klassen uit van het tabblad met de naam "Klassen"
@@ -44,7 +43,6 @@ def get_categorie(event):
 
     
 
-=======
 from model.excel_reader import read_excel_sheet
 
 #Deze functie leest de klassen uit van het tabblad met de naam "Klassen"
@@ -90,4 +88,3 @@ def get_categorie(event):
 
     
 
->>>>>>> 4ea80e0 (Initial Version)

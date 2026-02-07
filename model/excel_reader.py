@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import pandas as pd
 import os
 
@@ -16,7 +15,6 @@ def read_excel_sheet(sheet_name=None):
         print(f"Fout bij het openen van Excel: {e}")
         return None
     
-=======
 import pandas as pd
 import os
 
@@ -34,4 +32,3 @@ def read_excel_sheet(sheet_name=None):
         print(f"Fout bij het openen van Excel: {e}")
         return None
     
->>>>>>> 4ea80e0 (Initial Version)

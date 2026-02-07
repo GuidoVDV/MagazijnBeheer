@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #IMPORTS
 import tkinter as tk
 import os
@@ -85,7 +84,6 @@ def create_right_frame(parent):
     right_frame.reset_leerling = reset_leerling
     right_frame.toon_leerling = toon_leerling
 
-=======
 #IMPORTS
 import tkinter as tk
 import os
@@ -172,5 +170,4 @@ def create_right_frame(parent):
     right_frame.reset_leerling = reset_leerling
     right_frame.toon_leerling = toon_leerling
 
->>>>>>> 4ea80e0 (Initial Version)
     return right_frame

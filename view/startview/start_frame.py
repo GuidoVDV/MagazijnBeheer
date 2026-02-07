@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #IMPORTS
 import tkinter as tk
 
@@ -12,7 +11,6 @@ def create_start_frame(parent, start_app_callback):
     start_button = tk.Button(start_frame, text="Start Applicatie", command=start_app_callback)
     start_button.pack(pady=20)
     
-=======
 #IMPORTS
 import tkinter as tk
 
@@ -26,5 +24,4 @@ def create_start_frame(parent, start_app_callback):
     start_button = tk.Button(start_frame, text="Start Applicatie", command=start_app_callback)
     start_button.pack(pady=20)
     
->>>>>>> 4ea80e0 (Initial Version)
     return start_frame
