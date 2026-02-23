@@ -14,6 +14,7 @@ def show_frame(frame:tk.Frame, side_option:str="top", fill_option:str="both", ex
         frame.pack(side=side_option, fill=fill_option, expand=expand_option)
 
 #functie om van start -> hoofdscherm te gaan
+
 def start_app():
     menu_frame.pack(side="top", fill="x")
     show_frame(start_frame, hide=True)
